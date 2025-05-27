@@ -64,6 +64,7 @@ export type Translation = {
   sendMessage: string;
   addToCart: string;
   total: string;
+  cart: string;
 };
 
 export const translations: Record<Language, Translation> = {
@@ -130,7 +131,8 @@ export const translations: Record<Language, Translation> = {
     sendMessage: "Mesaj Gönder",
     addToCart: "Sepete Ekle",
     total: 'Toplam',
-    name: 'İsim'
+    name: 'İsim',
+    cart: 'Sepetim'
   },
   en: {
     footerDescription: "Dulger Meerschaum has been producing the highest quality meerschaum pipes since 1960. We combine traditional craftsmanship with modern design to offer pipe enthusiasts a unique experience.",
@@ -195,7 +197,8 @@ export const translations: Record<Language, Translation> = {
     sendMessage: "Send Message",
     addToCart: "Add to Cart",
     total: 'Total',
-    name: 'Name'
+    name: 'Name',
+    cart: 'My Cart'
   },
   zh: {
     footerDescription: "自1960年以来，Dulger Meerschaum一直生产最高品质的海泡石烟斗。我们将传统工艺与现代设计相结合，为烟斗爱好者提供独特的体验。",
@@ -260,6 +263,7 @@ export const translations: Record<Language, Translation> = {
     sendMessage: "发送消息",
     addToCart: "加入购物车",
     total: '总计',
-    name: '姓名'
+    name: '姓名',
+    cart: '我的购物车'
   }
 }; 

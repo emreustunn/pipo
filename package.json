@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.4",
     "@types/nodemailer": "^6.4.17",
     "next": "15.3.2",
     "nodemailer": "^7.0.3",
