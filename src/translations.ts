@@ -14,6 +14,8 @@ export type Translation = {
   name: string;
   email: string;
   message: string;
+  address: string;
+  phone: string;
   premiumQuality: string;
   premiumQualityDesc: string;
   yearsExperience: string;
@@ -136,6 +138,8 @@ export const translations: Record<Language, Translation> = {
     name: 'İsim',
     email: 'E-posta',
     message: 'Mesaj',
+    address: 'Adres',
+    phone: 'Telefon',
     cart: 'Sepetim'
   },
   en: {
@@ -204,6 +208,8 @@ export const translations: Record<Language, Translation> = {
     name: 'Name',
     email: 'Email',
     message: 'Message',
+    address: 'Address',
+    phone: 'Phone',
     cart: 'My Cart'
   },
   zh: {
@@ -272,6 +278,8 @@ export const translations: Record<Language, Translation> = {
     name: '姓名',
     email: '电子邮件',
     message: '消息',
+    address: '地址',
+    phone: '电话',
     cart: '我的购物车'
   }
 }; 
