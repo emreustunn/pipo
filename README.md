@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dulger Meerschaum Website
 
-## Getting Started
+A modern, responsive website for Dulger Meerschaum, showcasing premium meerschaum pipes and providing a seamless user experience across multiple languages.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Multi-language Support**: Seamlessly switch between Turkish, English, and Chinese
+- **Responsive Design**: Perfect viewing experience on any device
+- **Modern UI**: Beautiful animations and transitions
+- **Interactive Elements**: Engaging user interface with dynamic content
+- **SEO Optimized**: Built with Next.js for optimal performance
+
+## 🛠️ Technologies Used
+
+- **Next.js 14**: For server-side rendering and optimal performance
+- **React**: For building the user interface
+- **Tailwind CSS**: For styling and responsive design
+- **TypeScript**: For type safety and better development experience
+- **Context API**: For state management and language switching
+
+## 📱 Pages
+
+- **Home**: Showcasing featured products and brand story
+- **About**: Company history and craftsmanship
+- **Contact**: Get in touch with the team
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/emreustunn/pipo.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 🌐 Language Support
+
+The website supports three languages:
+- 🇹🇷 Turkish (Default)
+- 🇬🇧 English
+- 🇨🇳 Chinese
+
+## 🎨 Design Features
+
+- Premium gradient backgrounds
+- Smooth animations
+- Responsive image handling
+- Interactive product showcases
+- Modern navigation system
+
+## 📦 Project Structure
+
+```
+pipo/
+├── public/
+│   └── images/
+├── src/
+│   ├── app/
+│   │   ├── about/
+│   │   ├── contact/
+│   │   └── page.tsx
+│   ├── components/
+│   ├── context/
+│   └── translations/
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📄 License
 
-## Learn More
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-To learn more about Next.js, take a look at the following resources:
+## 👥 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For any inquiries, please reach out to:
+- Email: [Your Email]
+- Website: [Your Website]
+- LinkedIn: [Your LinkedIn]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by [Your Name]
