@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { LanguageProvider } from '@/context/LanguageContext';
+import { CartProvider } from '@/context/CartContext';
 import Header from '@/components/Header';
 import LanguageSelector from '@/components/LanguageSelector';
 import type { Metadata } from 'next';
@@ -21,13 +22,15 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning>
       <body className={inter.className}>
         <LanguageProvider>
-          <div className="min-h-screen bg-gray-50">
-            <Header />
-            <main className="pt-0">
-              {children}
-            </main>
-            <LanguageSelector />
-          </div>
+          <CartProvider>
+            <div className="min-h-screen bg-gray-50">
+              <Header />
+              <main className="pt-0">
+                {children}
+              </main>
+              <LanguageSelector />
+            </div>
+          </CartProvider>
         </LanguageProvider>
       </body>
     </html>
