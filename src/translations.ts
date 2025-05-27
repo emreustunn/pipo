@@ -11,6 +11,7 @@ export type Translation = {
   heroSubtitle: string;
   learnMore: string;
   contactUs: string;
+  name: string;
   premiumQuality: string;
   premiumQualityDesc: string;
   yearsExperience: string;
@@ -128,7 +129,8 @@ export const translations: Record<Language, Translation> = {
     emailValue: "info@dulgermeerschaum.com",
     sendMessage: "Mesaj Gönder",
     addToCart: "Sepete Ekle",
-    total: 'Toplam'
+    total: 'Toplam',
+    name: 'İsim'
   },
   en: {
     footerDescription: "Dulger Meerschaum has been producing the highest quality meerschaum pipes since 1960. We combine traditional craftsmanship with modern design to offer pipe enthusiasts a unique experience.",
@@ -192,7 +194,8 @@ export const translations: Record<Language, Translation> = {
     emailValue: "info@dulgermeerschaum.com",
     sendMessage: "Send Message",
     addToCart: "Add to Cart",
-    total: 'Total'
+    total: 'Total',
+    name: 'Name'
   },
   zh: {
     footerDescription: "自1960年以来，Dulger Meerschaum一直生产最高品质的海泡石烟斗。我们将传统工艺与现代设计相结合，为烟斗爱好者提供独特的体验。",
@@ -256,6 +259,7 @@ export const translations: Record<Language, Translation> = {
     emailValue: "info@dulgermeerschaum.com",
     sendMessage: "发送消息",
     addToCart: "加入购物车",
-    total: '总计'
+    total: '总计',
+    name: '姓名'
   }
 }; 
