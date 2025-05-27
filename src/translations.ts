@@ -13,6 +13,7 @@ export type Translation = {
   contactUs: string;
   name: string;
   email: string;
+  message: string;
   premiumQuality: string;
   premiumQualityDesc: string;
   yearsExperience: string;
@@ -134,6 +135,7 @@ export const translations: Record<Language, Translation> = {
     total: 'Toplam',
     name: 'İsim',
     email: 'E-posta',
+    message: 'Mesaj',
     cart: 'Sepetim'
   },
   en: {
@@ -201,6 +203,7 @@ export const translations: Record<Language, Translation> = {
     total: 'Total',
     name: 'Name',
     email: 'Email',
+    message: 'Message',
     cart: 'My Cart'
   },
   zh: {
@@ -268,6 +271,7 @@ export const translations: Record<Language, Translation> = {
     total: '总计',
     name: '姓名',
     email: '电子邮件',
+    message: '消息',
     cart: '我的购物车'
   }
 }; 
