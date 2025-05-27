@@ -4,36 +4,65 @@ import { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '@/translations';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type Language = 'tr' | 'en' | 'zh';
 
 export default function Header() {
   const { language, setLanguage } = useLanguage();
-  const t = translations[language];
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const t = translations[language];
 
-  const languages = [
-    { code: 'tr' as Language, label: '🇹🇷 TR' },
-    { code: 'en' as Language, label: '🇬🇧 EN' },
-    { code: 'zh' as Language, label: '🇨🇳 中文' }
+  const languages: { code: Language; label: string; flag: string }[] = [
+    { code: 'tr', label: 'TR', flag: '🇹🇷' },
+    { code: 'en', label: 'EN', flag: '🇬🇧' },
+    { code: 'zh', label: '中文', flag: '🇨🇳' }
   ];
 
   return (
-    <header className="bg-[#800020] text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#2C1810] shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Navigation Links */}
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/red_header_logo.avif"
+                alt="Dulger Meerschaum Logo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <span className="ml-2 text-amber-50 font-semibold text-lg">
+                {t.brand}
+              </span>
+            </Link>
+          </div>
+
+          {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="nav-link">
+            <Link
+              href="/"
+              className="text-amber-50 hover:text-amber-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+            >
               {t.home}
             </Link>
-            <Link href="/about" className="nav-link">
+            <Link
+              href="/about"
+              className="text-amber-50 hover:text-amber-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+            >
               {t.about}
             </Link>
-            <Link href="/contact" className="nav-link">
+            <Link
+              href="/contact"
+              className="text-amber-50 hover:text-amber-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+            >
               {t.contact}
             </Link>
-            <Link href="/shop" className="nav-link">
+            <Link
+              href="/shop"
+              className="text-amber-50 hover:text-amber-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+            >
               {t.shop}
             </Link>
           </nav>
@@ -42,33 +71,56 @@ export default function Header() {
           <div className="relative">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
+              className="flex items-center text-amber-50 hover:text-amber-200 focus:outline-none"
             >
-              <span>{languages.find(lang => lang.code === language)?.label}</span>
+              <span className="mr-2">{language.toUpperCase()}</span>
               <svg
-                className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  isDropdownOpen ? 'transform rotate-180' : ''
+                }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
 
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg py-1 z-50">
-                {languages.map((lang) => (
+              <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-amber-50 ring-1 ring-black ring-opacity-5">
+                <div
+                  className="py-1"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="language-menu"
+                >
                   <button
-                    key={lang.code}
-                    onClick={() => {
-                      setLanguage(lang.code);
-                      setIsDropdownOpen(false);
-                    }}
-                    className="w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 flex items-center space-x-2"
+                    onClick={() => setLanguage('tr')}
+                    className="block w-full text-left px-4 py-2 text-sm text-[#2C1810] hover:bg-amber-100"
+                    role="menuitem"
                   >
-                    <span>{lang.label}</span>
+                    Türkçe
                   </button>
-                ))}
+                  <button
+                    onClick={() => setLanguage('en')}
+                    className="block w-full text-left px-4 py-2 text-sm text-[#2C1810] hover:bg-amber-100"
+                    role="menuitem"
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => setLanguage('zh')}
+                    className="block w-full text-left px-4 py-2 text-sm text-[#2C1810] hover:bg-amber-100"
+                    role="menuitem"
+                  >
+                    中文
+                  </button>
+                </div>
               </div>
             )}
           </div>
